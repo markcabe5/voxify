@@ -2,7 +2,9 @@ const voicesDropdown = document.querySelector("#voices");
 const textarea = document.querySelector("#text");
 const rateInput = document.querySelector("#rate");
 const pitchInput = document.querySelector("#pitch");
-const speak = document.querySelector("#speak");
+const speakBtn = document.querySelector("#speak");
+const stopBtn = document.querySelector("#stop");
+
 
 const message = new SpeechSynthesisUtterance(textarea.value);
 
@@ -38,11 +40,16 @@ function setText() {
 }
 
 function speakVoice() {
-    speechSynthesis.    speak(message);
+    speechSynthesis.speak(message);
+}
+
+function stopVoice() {
+    speechSynthesis.cancel();
 }
 
 speechSynthesis.addEventListener("voiceschanged", populateVoices);
 voicesDropdown.addEventListener("change", setVoices);
 rateInput.addEventListener("change", setRate);
 pitchInput.addEventListener("change", setPitch);
-speak.addEventListener("change", speakVoice);
+speakBtn.addEventListener("click", speakVoice);
+stopBtn.addEventListener("click", stopVoice);
