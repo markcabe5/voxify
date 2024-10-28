@@ -49,15 +49,18 @@ div {
     display: flex;
 }
 
-div button {
+div button     {
     background-color:#5365A4;
     color: #F1F5F9;
     width: 50%;
     font-size: 20px;
     border: 0;
     border-bottom: 5px solid #5365A4;
-    
-}
-button {
     padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+div button.active {
+    top: 2px;
 }
