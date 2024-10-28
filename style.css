@@ -61,6 +61,6 @@ div button     {
     cursor: pointer;
     position: relative;
 }
-div button.active {
+div button:active {
     top: 2px;
 }
