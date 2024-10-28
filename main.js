@@ -51,5 +51,6 @@ speechSynthesis.addEventListener("voiceschanged", populateVoices);
 voicesDropdown.addEventListener("change", setVoices);
 rateInput.addEventListener("change", setRate);
 pitchInput.addEventListener("change", setPitch);
+textarea.addEventListener("change", setText);
 speakBtn.addEventListener("click", speakVoice);
 stopBtn.addEventListener("click", stopVoice);
